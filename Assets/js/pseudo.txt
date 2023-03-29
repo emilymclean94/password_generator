@@ -1,0 +1,14 @@
+-Prompt for:
+    1 Would you like to include XXX?
+       if (window.confirm ("Would you like to include uppercase characters?) ) {random select}
+
+    -uppercase, lowercase, numerical, special characters
+
+-Variable = array for each password character
+var uppercase = ["A", "B", etc.]
+
+-Confirm true or false for each character type
+-If else statement
+
+-randomly select and iterate until character number reached.
+-window alert with password
