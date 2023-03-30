@@ -3,7 +3,8 @@
        if (window.confirm ("Would you like to include uppercase characters?) ) {random select}
 
     -uppercase, lowercase, numerical, special characters
-
+    2 How many characters?
+        If < 8 ---- alert ---- password must be at least 8 characters
 -Variable = array for each password character
 var uppercase = ["A", "B", etc.]
 
