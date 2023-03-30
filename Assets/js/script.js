@@ -29,13 +29,15 @@ function writePassword() {
 }
 
 function generatePassword() {
-  let generatedPassword = [];
+  let generatedPassword = "";
   for (var i = 0; i < characterLength; i++) {
-    var randomIndex = Math.floor(Math.random() * characterLength.length);
-    generatedPassword = choiceArray + randomIndex;
+    var randomIndex = Math.floor(Math.random() * choiceArray.length);
+    generatedPassword += choiceArray[randomIndex];
   }
   return generatedPassword;
 }
+
+
 
 // generates an array based on the criteria user confirms
 function getPrompts() {
@@ -50,16 +52,16 @@ function getPrompts() {
 
   if (window.confirm("Would you like your password to contain uppercase letters?")); {
     choiceArray = choiceArray.concat(upArray);
-  }
+  };
   if (window.confirm("Would you like your password to contain lowercase letters?")) {
     choiceArray = choiceArray.concat(lowArray);
-  }
+  };
   if (window.confirm("Would you like your password to contain numbers?")) {
     choiceArray = choiceArray.concat(numArray);
-  }
+  };
   if (window.confirm("Would you like your password to contain special characters?")) {
     choiceArray = choiceArray.concat(symArray);
-  }
+  };
   return true;
 
 }
