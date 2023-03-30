@@ -1,5 +1,5 @@
-var characterLength = 8;
-var choiceArray = [];
+let characterLength = 8;
+let choiceArray = [];
 
 
 const upArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
@@ -15,12 +15,12 @@ generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
-  var correctPrompts = getPrompts();
+  const correctPrompts = getPrompts();
 
   if (correctPrompts) {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-  
+    let password = generatePassword();
+    let passwordText = document.querySelector("#password");
+
     passwordText.value = password;
 
   }
@@ -29,7 +29,12 @@ function writePassword() {
 }
 
 function generatePassword() {
-  // generate password based on prompts
+  let password = "";
+  for (var i = 0; i < characterLength.length, i++){
+    var randomIndex = Math.floor(Math.random() * characterLength);
+    password = choiceArray + randomIndex;
+  }
+  return password;
 }
 
 function getPrompts() {
